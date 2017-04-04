@@ -1,16 +1,17 @@
 import java.io.*;
 
 /**
- * Created by youfar on 2017/4/3.
+ * @author cho.oh
  */
-//TODO: 数字以外の
-public class weekday {
+public class Practice_5_7_ChoOh {
+
     public static void main(String[] args) {
-        System.out.println("現在の時刻を入力してください。");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
+            System.out.println("0~6の数字を入力してください。対応した曜日を表示します。");
             String line = reader.readLine();
             int day = Integer.parseInt(line);
+
             switch (day){
                 case 0:
                     System.out.println("日曜日");
@@ -39,6 +40,8 @@ public class weekday {
             }
         } catch (IOException e){
             System.out.println(e);
+        } catch (NumberFormatException e){
+            System.out.println("数字を入力してください");
         }
     }
 }
