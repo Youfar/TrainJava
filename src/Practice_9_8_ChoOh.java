@@ -1,21 +1,19 @@
 /**
- * Created by cho.oh on 2017/4/4.
+ * Created by youfar on 2017/4/5.
  */
-public class SortData {
+public class Practice_9_8_ChoOh {
+
     public static void main(String[] args) {
         int[] data = { 31, 41, 59, 26, 53, 58, 97, 93, 23, 84 };
-        int temp = 0;
         System.out.println("並べ替える前");
         for (int i = 0; i < data.length; i++) {
             System.out.print(data[i] + " ");
         }
         System.out.println("");
-        for (int i = 0; i < data.length; i++) {
+        for (int i = 0; i < data.length - 1; i++) {
             for (int j = i + 1; j < data.length; j++) {
-                if (data[i] > data[j]){
-                    temp = data[i];
-                    data[i] = data[j];
-                    data[j] = temp;
+                if (data[i] > data[j]) {
+                    swapNum(i, j, data);
                 }
             }
         }
@@ -24,6 +22,12 @@ public class SortData {
             System.out.print(data[i] + " ");
         }
         System.out.println("");
+    }
 
+    private static void swapNum(int i, int j, int[] data) {
+        int temp;
+        temp = data[i];
+        data[i] = data[j];
+        data[j] = temp;
     }
 }

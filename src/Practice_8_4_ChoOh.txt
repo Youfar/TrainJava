@@ -1,0 +1,14 @@
+メソッドmain
+引数 args
+局所変数 i
+
+メソッドgetPower
+引数 x n
+局所変数 y i
+
+メソッドPrintGraph
+引数 x
+
+メソッドPrintGraph
+引数 x c
+局所変数 i
