@@ -1,5 +1,5 @@
 /**
- * Created by youfar on 2017/4/5.
+ * @author cho.oh
  */
 public class Practice_9_8_ChoOh {
 
@@ -13,7 +13,7 @@ public class Practice_9_8_ChoOh {
         for (int i = 0; i < data.length - 1; i++) {
             for (int j = i + 1; j < data.length; j++) {
                 if (data[i] > data[j]) {
-                    swapNum(i, j, data);
+                    data = swapNum(i, j, data);
                 }
             }
         }
@@ -24,10 +24,12 @@ public class Practice_9_8_ChoOh {
         System.out.println("");
     }
 
-    private static void swapNum(int i, int j, int[] data) {
+    private static int[] swapNum(int i, int j, int[] data) {
         int temp;
         temp = data[i];
         data[i] = data[j];
         data[j] = temp;
+
+        return data;
     }
 }
